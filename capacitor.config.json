@@ -1,0 +1,8 @@
+{
+  "appId": "com.thehollow.nadir",
+  "appName": "THE HOLLOW",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}

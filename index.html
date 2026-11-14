@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#080b0e">
+  <title>THE HOLLOW — O Sinal do Abismo</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="game">
+    <canvas id="view"></canvas>
+    <div id="vignette"></div>
+    <div id="grain"></div>
+
+    <header class="topbar">
+      <div class="brand">NADIR <span> / COMPLEXO SUBTERRÂNEO</span></div>
+      <div class="chapter">REGISTRO 01 <i>•</i> CHEGADA</div>
+    </header>
+
+    <div class="reticle" aria-hidden="true"><span></span></div>
+    <div class="status">
+      <div class="status-label">LANTERNA <b id="battery">100%</b></div>
+      <div class="battery"><div id="batteryFill"></div></div>
+      <div id="hint" class="hint">SISTEMA ONLINE</div>
+    </div>
+
+    <div id="message" class="message">COMPLEXO NADIR · SETOR DE RECEPÇÃO</div>
+
+    <section id="mobileControls" aria-label="Controles">
+      <div id="joystick" class="joystick"><div id="stick" class="stick"></div></div>
+      <div class="look-help">DESLIZE PARA OLHAR</div>
+      <div class="action-buttons">
+        <button id="flashBtn" class="control-btn active">LANTERNA</button>
+        <button id="crouchBtn" class="control-btn">AGACHAR</button>
+        <button id="runBtn" class="control-btn">CORRER</button>
+        <button id="interactBtn" class="control-btn interact">INTERAGIR</button>
+      </div>
+      <button id="inventoryBtn" class="inventory-btn">≡</button>
+    </section>
+
+    <div id="desktopHelp">WASD mover · MOUSE olhar · SHIFT correr · CTRL agachar · F lanterna · E interagir</div>
+    <div id="crosshairPrompt"></div>
+
+    <div id="pause" class="overlay hidden">
+      <div class="panel">
+        <div class="eyebrow">COMPLEXO NADIR</div>
+        <h1>PAUSADO</h1>
+        <p>O silêncio também faz parte do sinal.</p>
+        <button id="resumeBtn" class="menu-btn">CONTINUAR</button>
+        <button id="restartBtn" class="menu-btn secondary">REINICIAR</button>
+      </div>
+    </div>
+
+    <div id="inventory" class="overlay hidden">
+      <div class="panel">
+        <div class="eyebrow">EQUIPAMENTO PESSOAL</div>
+        <h2>INVENTÁRIO</h2>
+        <p class="muted">Nenhum item coletado.</p>
+        <button id="closeInventory" class="menu-btn">FECHAR</button>
+      </div>
+    </div>
+    <button id="pauseBtn" class="pause-btn" aria-label="Pausar">Ⅱ</button>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
